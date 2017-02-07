@@ -1,0 +1,7 @@
+[user]
+	email = starodubcevna@gmail.com
+	name = Nikolai Starodubtcev
+[core]
+	editor = vim
+[merge]
+	tool = vimdiff
