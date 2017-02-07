@@ -14,9 +14,11 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'flazz/vim-colorschemes'
 Bundle 'scrooloose/nerdtree'
 Bundle 'paradox41/material-color-scheme'
+Bundle 'ludovicchabant/vim-lawrencium'
 
 filetype plugin indent on
-autocmd BufEnter * set colorcolumn=80
+autocmd BufEnter * let &colorcolumn="80,100"
+autocmd BufWritePost *.py call Flake8()
 syntax on
 colorscheme vividchalk
 set smartindent
@@ -26,6 +28,7 @@ set tabstop=4
 set shiftwidth=4
 set incsearch
 set hlsearch
+
 if !&diff
     autocmd BufWinLeave *.* mkview
     autocmd BufWinEnter *.* silent loadview
@@ -54,3 +57,5 @@ if has("cscope")
         exec "nmap <C-Space><C-Space>".key." :vert s".cmd
     endfor
 endif
+set number
+highlight LineNr ctermfg=white ctermbg=darkgrey
