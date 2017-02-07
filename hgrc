@@ -1,0 +1,19 @@
+[ui]
+username = Nikolai Starodubtcev <starodubcevna@gmail.com>
+editor = vim
+
+[extensions]
+color =
+shelve =
+mq =
+rebase =
+transplant =
+
+[color]
+mode = auto
+status.modified = blue bold underline red_background
+status.added = green bold
+status.removed = red bold blue_background
+status.deleted = cyan bold underline
+status.unknown = magenta bold underline
+status.ignored = black bold
