@@ -5,22 +5,28 @@ endif
 set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim/
-call vundle#rc()
-Bundle 'gmarik/vundle'
-Bundle 'tpope/vim-fugitive'
-Bundle 'nvie/vim-flake8'
-Bundle 'tmhedberg/SimpylFold'
-Bundle 'kien/ctrlp.vim'
-Bundle 'flazz/vim-colorschemes'
-Bundle 'scrooloose/nerdtree'
-Bundle 'paradox41/material-color-scheme'
-Bundle 'ludovicchabant/vim-lawrencium'
-
+call vundle#begin()
+Plugin 'gmarik/vundle.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'nvie/vim-flake8'
+Plugin 'tmhedberg/SimpylFold'
+Plugin 'kien/ctrlp.vim'
+Plugin 'flazz/vim-colorschemes'
+Plugin 'scrooloose/nerdtree'
+Plugin 'paradox41/material-color-scheme'
+Plugin 'ludovicchabant/vim-lawrencium'
+Plugin 'dracula/vim'
+Plugin 'stephpy/vim-yaml'
+Plugin 'dense-analysis/ale'
+call vundle#end()
 filetype plugin indent on
 autocmd BufEnter * let &colorcolumn="80,100"
 autocmd BufWritePost *.py call Flake8()
+autocmd BufRead,BufNewFile *.yaml,*.yml set syntax=yaml
 syntax on
-colorscheme vividchalk
+" colorscheme vividchalk
+" colorscheme bubblegum-256-light
+colorscheme dracula
 set smartindent
 set nowrap
 set expandtab
